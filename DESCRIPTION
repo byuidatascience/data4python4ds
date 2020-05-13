@@ -1,0 +1,13 @@
+Package: data4python4ds
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "J.",
+           family = "Hathway",
+           role = c("aut", "cre"),
+           email = "hathwayj@byui.edu",
+           comment = c(ORCID = "0000-0002-1574-0832"))
+Description: What the package does (one paragraph).
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
