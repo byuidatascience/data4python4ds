@@ -32,7 +32,7 @@ dpr_export(mpg, export_folder = path(package_path, "data-raw"),
 dpr_document(mpg, extension = ".md.R", export_folder = usethis::proj_get(),
              object_name = "mpg", title = "Fuel economy data from 1999 to 2008 for 38 popular models of cars",
              description = "This dataset contains a subset of the fuel economy data that the EPA makes available on http://fueleconomy.gov. It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car.",
-             source = "",
+             source = "https://github.com/tidyverse/ggplot2",
              var_details = list(manufacturer = "manufacturer name",
                                 model = "model name",
                                 displ = "engine displacement, in litres",
@@ -47,6 +47,36 @@ dpr_document(mpg, extension = ".md.R", export_folder = usethis::proj_get(),
 
 usethis::use_data(mpg)
 
+# diamonds
+
+diamonds <- ggplot2::diamonds
+
+usethis::use_data(diamonds)
+
+dpr_export(diamonds, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
+
+dpr_document(diamonds, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "diamonds", title = "Prices of over 50,000 round cut diamonds",
+             description = "A dataset containing the prices and other attributes of almost 54,000 diamonds. The variables are as follows:",
+             source = "https://github.com/tidyverse/ggplot2",
+             var_details = list(price = "price in US dollars (326–18,823)",
+              carat = "weight of the diamond (0.2–5.01)",
+              cut = "quality of the cut (Fair, Good, Very Good, Premium, Ideal)",
+              color = "diamond colour, from D (best) to J (worst)",
+              clarity = "a measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))",
+              x = "length in mm (0–10.74)",
+              y = "width in mm (0–58.9)",
+              z = "depth in mm (0–31.8)",
+              depth = "total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43–79)",
+              table = "width of top of diamond relative to widest point (43–95)"))
+
+
+
+
+
+### documentation
+
 dpr_readme(usethis::proj_get(), package_name_text, user)
 
 dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_data.R", 
@@ -54,5 +84,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'documentation'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'mpg data'", repo_url = NULL)
 
