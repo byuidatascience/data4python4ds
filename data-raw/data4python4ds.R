@@ -84,5 +84,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'mpg data'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'diamonds data'", repo_url = NULL)
 
