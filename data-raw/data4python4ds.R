@@ -72,6 +72,41 @@ dpr_document(diamonds, extension = ".md.R", export_folder = usethis::proj_get(),
               table = "width of top of diamond relative to widest point (43–95)"))
 
 
+# nycflights13
+
+flights <- nycflights13::flights
+
+usethis::use_data(flights)
+
+dpr_export(flights, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".xlsx", ".sav", ".dta"))
+
+dpr_document(flights, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "flights", title = "Flights data",
+             description = "On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013.",
+             source = "https://github.com/hadley/nycflights13",
+             var_details = list(year = "Year of departure",
+                                month = "Month of departure",
+                                day = "Day of departure",
+                                dep_time = "Actual departure time (format HHMM or HMM), local tz.",
+                                arr_time = "Actual arrival times (format HHMM or HMM), local tz.",
+                                sched_dep_time = "Scheduled departure time (format HHMM or HMM), local tz.", 
+                                sched_arr_time = "Scheduled arrival time (format HHMM or HMM), local tz.",
+                                dep_delay = "Departure delay, in minutes. Negative times represent early departures.",
+                                arr_delay = "Arrival delays, in minutes. Negative times represent early arrivals.",
+                                carrier = "Two letter carrier abbreviation. See airlines in nycflights13 R package to get names.",
+                                flight = "Flight number.",
+                                tailnum = "Plane tail number. See planes in nycflights13 R package for additional metadata.",
+                                
+                                origin = "Origin. See airports in nycflights13 R package for additional metadata.",
+                                dest = "Destination. See airports in nycflights13 R package for additional metadata.",
+                                air_time = "Amount of time spent in the air, in minutes.",
+                                distance = "Distance between airports, in miles.",
+                                hour = "Time of scheduled departure broken into hour and minutes.",
+                                minute = "Time of scheduled departure broken into hour and minutes.",
+                                time_hour = "Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.")
+                                )
+
 
 
 

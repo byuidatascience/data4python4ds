@@ -57,3 +57,41 @@ A data frame with columns:
 
 
 
+## Flights data
+
+The data is called flights.
+
+### Description
+
+On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013.
+
+The source of this data is < https://github.com/hadley/nycflights13 >
+
+### Data format
+
+A data frame with columns:
+
+|variable       |class          |description                                                                                                                   |
+|:--------------|:--------------|:-----------------------------------------------------------------------------------------------------------------------------|
+|year           |integer        |Year of departure                                                                                                             |
+|month          |integer        |Month of departure                                                                                                            |
+|day            |integer        |Day of departure                                                                                                              |
+|dep_time       |integer        |Actual departure time (format HHMM or HMM), local tz.                                                                         |
+|sched_dep_time |integer        |Scheduled departure time (format HHMM or HMM), local tz.                                                                      |
+|dep_delay      |numeric        |Departure delay, in minutes. Negative times represent early departures.                                                       |
+|arr_time       |integer        |Actual arrival times (format HHMM or HMM), local tz.                                                                          |
+|sched_arr_time |integer        |Scheduled arrival time (format HHMM or HMM), local tz.                                                                        |
+|arr_delay      |numeric        |Arrival delays, in minutes. Negative times represent early arrivals.                                                          |
+|carrier        |character      |Two letter carrier abbreviation. See airlines in nycflights13 R package to get names.                                         |
+|flight         |integer        |Flight number.                                                                                                                |
+|tailnum        |character      |Plane tail number. See planes in nycflights13 R package for additional metadata.                                              |
+|origin         |character      |Origin. See airports in nycflights13 R package for additional metadata.                                                       |
+|dest           |character      |Destination. See airports in nycflights13 R package for additional metadata.                                                  |
+|air_time       |numeric        |Amount of time spent in the air, in minutes.                                                                                  |
+|distance       |numeric        |Distance between airports, in miles.                                                                                          |
+|hour           |numeric        |Time of scheduled departure broken into hour and minutes.                                                                     |
+|minute         |numeric        |Time of scheduled departure broken into hour and minutes.                                                                     |
+|time_hour      |POSIXct,POSIXt |Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data. |
+
+
+

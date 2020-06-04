@@ -49,3 +49,37 @@
 
 
 
+#'
+#' @title Flights data
+#' @description On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{year}{The variable is integer. Year of departure}
+#'  \item{month}{The variable is integer. Month of departure}
+#'  \item{day}{The variable is integer. Day of departure}
+#'  \item{dep_time}{The variable is integer. Actual departure time (format HHMM or HMM), local tz.}
+#'  \item{sched_dep_time}{The variable is integer. Scheduled departure time (format HHMM or HMM), local tz.}
+#'  \item{dep_delay}{The variable is numeric. Departure delay, in minutes. Negative times represent early departures.}
+#'  \item{arr_time}{The variable is integer. Actual arrival times (format HHMM or HMM), local tz.}
+#'  \item{sched_arr_time}{The variable is integer. Scheduled arrival time (format HHMM or HMM), local tz.}
+#'  \item{arr_delay}{The variable is numeric. Arrival delays, in minutes. Negative times represent early arrivals.}
+#'  \item{carrier}{The variable is character. Two letter carrier abbreviation. See airlines in nycflights13 R package to get names.}
+#'  \item{flight}{The variable is integer. Flight number.}
+#'  \item{tailnum}{The variable is character. Plane tail number. See planes in nycflights13 R package for additional metadata.}
+#'  \item{origin}{The variable is character. Origin. See airports in nycflights13 R package for additional metadata.}
+#'  \item{dest}{The variable is character. Destination. See airports in nycflights13 R package for additional metadata.}
+#'  \item{air_time}{The variable is numeric. Amount of time spent in the air, in minutes.}
+#'  \item{distance}{The variable is numeric. Distance between airports, in miles.}
+#'  \item{hour}{The variable is numeric. Time of scheduled departure broken into hour and minutes.}
+#'  \item{minute}{The variable is numeric. Time of scheduled departure broken into hour and minutes.}
+#'  \item{time_hour}{The variable is POSIXct,POSIXt. Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.}
+#' }
+#' @source \url{https://github.com/hadley/nycflights13}
+#' @examples
+#' \dontrun{
+#' flights
+#'}
+'flights'
+
+
+
