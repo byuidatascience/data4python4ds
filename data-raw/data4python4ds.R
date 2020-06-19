@@ -107,6 +107,42 @@ dpr_document(flights, extension = ".md.R", export_folder = usethis::proj_get(),
                                 time_hour = "Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.")
                                 )
 
+### Lahman Baseball data
+
+batting <- Lahman::Batting
+
+usethis::use_data(batting)
+
+dpr_export(batting, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".xlsx", ".sav", ".dta"))
+
+dpr_document(batting, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "batting", title = "Batting table",
+             description = "Batting table - batting statistics",
+             source = "https://github.com/cdalzell/Lahman",
+             var_details = list(
+               playerID = "Player ID code",
+               yearID = "Year",
+               stint = "player's stint (order of appearances within a season)",
+               teamID = "Team",
+               lgID = "League; with values AA AL FL NL PL UA",
+               G = "Games: number of games in which a player played",
+               AB = "At Bats",
+               R = "Runs",
+               H = "Hits: times reached base because of a batted, fair ball without error by the defense",
+               X2B = "Doubles: hits on which the batter reached second base safely",
+               X3B = "Triples: hits on which the batter reached third base safely",
+               HR = "Homeruns",
+               RBI = "Runs Batted In",
+               SB = "Stolen Bases",
+               CS = "Caught Stealing",
+               BB = "Base on Balls",
+               SO = "Strikeouts",
+               IBB = "Intentional walks",
+               HBP = "Hit by pitch",
+               SH = "Sacrifice hits",
+               SF = "Sacrifice flies",
+               GIDP = "Grounded into double plays"))
 
 
 
@@ -119,5 +155,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'diamonds data'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'flights data'", repo_url = NULL)
 

@@ -95,3 +95,44 @@ A data frame with columns:
 
 
 
+## Batting table
+
+The data is called batting.
+
+### Description
+
+Batting table - batting statistics
+
+The source of this data is < https://github.com/cdalzell/Lahman >
+
+### Data format
+
+A data frame with columns:
+
+|variable |class     |description                                                                          |
+|:--------|:---------|:------------------------------------------------------------------------------------|
+|playerID |character |Player ID code                                                                       |
+|yearID   |integer   |Year                                                                                 |
+|stint    |integer   |player's stint (order of appearances within a season)                                |
+|teamID   |factor    |Team                                                                                 |
+|lgID     |factor    |League; with values AA AL FL NL PL UA                                                |
+|G        |integer   |Games: number of games in which a player played                                      |
+|AB       |integer   |At Bats                                                                              |
+|R        |integer   |Runs                                                                                 |
+|H        |integer   |Hits: times reached base because of a batted, fair ball without error by the defense |
+|X2B      |integer   |Doubles: hits on which the batter reached second base safely                         |
+|X3B      |integer   |Triples: hits on which the batter reached third base safely                          |
+|HR       |integer   |Homeruns                                                                             |
+|RBI      |integer   |Runs Batted In                                                                       |
+|SB       |integer   |Stolen Bases                                                                         |
+|CS       |integer   |Caught Stealing                                                                      |
+|BB       |integer   |Base on Balls                                                                        |
+|SO       |integer   |Strikeouts                                                                           |
+|IBB      |integer   |Intentional walks                                                                    |
+|HBP      |integer   |Hit by pitch                                                                         |
+|SH       |integer   |Sacrifice hits                                                                       |
+|SF       |integer   |Sacrifice flies                                                                      |
+|GIDP     |integer   |Grounded into double plays                                                           |
+
+
+
