@@ -120,3 +120,20 @@
 
 
 
+#'
+#' @title Old Faithful Geyser Data
+#' @description Waiting time between eruptions and the duration of the eruption for the Old Faithful geyser in Yellowstone National Park, Wyoming, USA.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{eruptions}{The variable is numeric. Eruption time in minutes}
+#'  \item{waiting}{The variable is numeric. Waiting time to next eruption}
+#' }
+#' @source \url{https://doi.org/10.2307/2347385}
+#' @examples
+#' \dontrun{
+#' faithful
+#'}
+'faithful'
+
+
+

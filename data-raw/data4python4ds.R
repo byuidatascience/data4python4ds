@@ -144,6 +144,22 @@ dpr_document(batting, extension = ".md.R", export_folder = usethis::proj_get(),
                SF = "Sacrifice flies",
                GIDP = "Grounded into double plays"))
 
+### Old Faithful data
+
+# faithful
+
+usethis::use_data(faithful)
+
+dpr_export(faithful, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".xlsx", ".sav", ".dta"))
+
+dpr_document(faithful, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "faithful", title = "Old Faithful Geyser Data",
+             description = "Waiting time between eruptions and the duration of the eruption for the Old Faithful geyser in Yellowstone National Park, Wyoming, USA.",
+             source = "https://doi.org/10.2307/2347385",
+             var_details = list(eruptions = 'Eruption time in minutes',
+                                waiting = 'Waiting time to next eruption'))
+
 
 
 ### documentation

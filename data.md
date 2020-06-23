@@ -136,3 +136,24 @@ A data frame with columns:
 
 
 
+## Old Faithful Geyser Data
+
+The data is called faithful.
+
+### Description
+
+Waiting time between eruptions and the duration of the eruption for the Old Faithful geyser in Yellowstone National Park, Wyoming, USA.
+
+The source of this data is < https://doi.org/10.2307/2347385 >
+
+### Data format
+
+A data frame with columns:
+
+|variable  |class   |description                   |
+|:---------|:-------|:-----------------------------|
+|eruptions |numeric |Eruption time in minutes      |
+|waiting   |numeric |Waiting time to next eruption |
+
+
+
