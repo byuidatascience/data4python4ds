@@ -24,6 +24,8 @@ package_path <- str_c(base_folder, package_name_text)
 github_info <- dpr_info_github(user, package_name_text)
 usethis::proj_set(package_path)
 
+#### mpg data
+
 mpg <- ggplot2::mpg
 
 dpr_export(mpg, export_folder = path(package_path, "data-raw"), 
@@ -160,6 +162,20 @@ dpr_document(faithful, extension = ".md.R", export_folder = usethis::proj_get(),
              var_details = list(eruptions = 'Eruption time in minutes',
                                 waiting = 'Waiting time to next eruption'))
 
+### Tabular data from tidyr
+
+
+library(tidyr)
+usethis::use_data(table1, table2, table3, table4a, table4b, table5)
+
+dpr_export(table1, export_folder = path(package_path, "data-raw"), export_format = c(".csv", ".xlsx", ".json"))
+dpr_export(table2, export_folder = path(package_path, "data-raw"), export_format = c(".csv", ".xlsx", ".json"))
+dpr_export(table3, export_folder = path(package_path, "data-raw"), export_format = c(".csv", ".xlsx", ".json"))
+dpr_export(table4a, export_folder = path(package_path, "data-raw"), export_format = c(".csv", ".xlsx", ".json"))
+dpr_export(table4b, export_folder = path(package_path, "data-raw"), export_format = c(".csv", ".xlsx", ".json"))
+dpr_export(table5, export_folder = path(package_path, "data-raw"), export_format = c(".csv", ".xlsx", ".json"))
+
+# See the 'tidyr_tabular_data_notes.R' where the data description was used to copy and past into the data.md and data.r folders.
 
 
 ### documentation
@@ -171,5 +187,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'flights data'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'faithful data'", repo_url = NULL)
 

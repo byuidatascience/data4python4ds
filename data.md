@@ -156,4 +156,22 @@ A data frame with columns:
 |waiting   |numeric |Waiting time to next eruption |
 
 
+## Example tabular representations
+
+The data are called table1, table2, table3, table4a, table4b, table5.
+
+### Description
+
+Data sets that demonstrate multiple ways to layout the same tabular data.
+
+table1, table2, table3, table4a, table4b, and table5 all display the number of TB cases documented by the World Health Organization in Afghanistan, Brazil, and China between 1999 and 2000. The data contains values associated with four variables (country, year, cases, and population), but each table organizes the values in a different layout.
+
+The data is a subset of the data contained in the World Health Organization Global Tuberculosis Report
+
+The source of the data <https://www.who.int/tb/country/data/download/en/>
+
+### Data Format
+
+See the data objects.
+
 
