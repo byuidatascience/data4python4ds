@@ -171,3 +171,78 @@
 #' @rdname table1
 #' @format NULL
 "table5"
+#'
+#' @title Word Health Organization (WHO) Tuberculosis as found in the R for Data Science Book
+#' @description The data uses the original codes given by the World Health Organization. The column names for columns five through 60 are made by combining new_ to a code for method of diagnosis (rel = relapse, sn = negative pulmonary smear, sp = positive pulmonary smear, ep = extrapulmonary) to a code for gender (f = female, m = male) to a code for age group (014 = 0-14 yrs of age, 1524 = 15-24 years of age, 2534 = 25 to 34 years of age, 3544 = 35 to 44 years of age, 4554 = 45 to 54 years of age, 5564 = 55 to 64 years of age, 65 = 65 years of age or older).
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{country}{The variable is character. Country name}
+#'  \item{iso2}{The variable is character. 2 letter ISO country code}
+#'  \item{iso3}{The variable is character. 3 letter ISO country code}
+#'  \item{year}{The variable is integer. year}
+#'  \item{new_sp_m014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_m1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_m2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_m3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_m4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_m5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_m65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_f014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_f1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_f2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_f3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_f4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_f5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sp_f65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_m014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_m1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_m2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_m3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_m4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_m5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_m65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_f014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_f1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_f2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_f3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_f4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_f5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_sn_f65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_m014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_m1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_m2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_m3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_m4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_m5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_m65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_f014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_f1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_f2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_f3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_f4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_f5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{new_ep_f65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_m014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_m1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_m2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_m3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_m4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_m5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_m65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_f014}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_f1524}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_f2534}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_f3544}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_f4554}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_f5564}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#'  \item{newrel_f65}{The variable is integer. Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details).}
+#' }
+#' @source \url{https://tidyr.tidyverse.org/reference/who.html}
+#' @examples
+#' \dontrun{
+#' who
+#'}
+'who'
+
+
+

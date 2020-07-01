@@ -175,3 +175,82 @@ The source of the data <https://www.who.int/tb/country/data/download/en/>
 See the data objects.
 
 
+## Word Health Organization (WHO) Tuberculosis as found in the R for Data Science Book
+
+The data is called who.
+
+### Description
+
+The data uses the original codes given by the World Health Organization. The column names for columns five through 60 are made by combining new_ to a code for method of diagnosis (rel = relapse, sn = negative pulmonary smear, sp = positive pulmonary smear, ep = extrapulmonary) to a code for gender (f = female, m = male) to a code for age group (014 = 0-14 yrs of age, 1524 = 15-24 years of age, 2534 = 25 to 34 years of age, 3544 = 35 to 44 years of age, 4554 = 45 to 54 years of age, 5564 = 55 to 64 years of age, 65 = 65 years of age or older).
+
+The source of this data is < https://tidyr.tidyverse.org/reference/who.html >
+
+### Data format
+
+A data frame with columns:
+
+|variable     |class     |description                                                                                                          |
+|:------------|:---------|:--------------------------------------------------------------------------------------------------------------------|
+|country      |character |Country name                                                                                                         |
+|iso2         |character |2 letter ISO country code                                                                                            |
+|iso3         |character |3 letter ISO country code                                                                                            |
+|year         |integer   |year                                                                                                                 |
+|new_sp_m014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_m1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_m2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_m3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_m4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_m5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_m65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_f014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_f1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_f2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_f3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_f4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_f5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sp_f65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_m014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_m1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_m2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_m3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_m4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_m5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_m65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_f014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_f1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_f2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_f3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_f4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_f5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_sn_f65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_m014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_m1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_m2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_m3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_m4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_m5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_m65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_f014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_f1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_f2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_f3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_f4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_f5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|new_ep_f65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_m014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_m1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_m2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_m3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_m4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_m5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_m65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_f014  |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_f1524 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_f2534 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_f3544 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_f4554 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_f5564 |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+|newrel_f65   |integer   |Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details). |
+
+
+

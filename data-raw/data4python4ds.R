@@ -177,6 +177,36 @@ dpr_export(table5, export_folder = path(package_path, "data-raw"), export_format
 
 # See the 'tidyr_tabular_data_notes.R' where the data description was used to copy and past into the data.md and data.r folders.
 
+#### Who data
+
+library(tidyr)
+usethis::use_data(who)
+
+dpr_export(who, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
+
+
+
+cnames <- colnames(who)[-c(1:4)]
+
+varlist <- vector("list", length(cnames))
+varlist[1:length(cnames)] <- "Counts of new TB cases recorded by group. Column names encode three variables that describe the group (see details)."
+names(varlist) <- cnames
+
+
+dpr_document(who, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "who", 
+             title = "Word Health Organization (WHO) Tuberculosis as found in the R for Data Science Book",
+             description = "The data uses the original codes given by the World Health Organization. The column names for columns five through 60 are made by combining new_ to a code for method of diagnosis (rel = relapse, sn = negative pulmonary smear, sp = positive pulmonary smear, ep = extrapulmonary) to a code for gender (f = female, m = male) to a code for age group (014 = 0-14 yrs of age, 1524 = 15-24 years of age, 2534 = 25 to 34 years of age, 3544 = 35 to 44 years of age, 4554 = 45 to 54 years of age, 5564 = 55 to 64 years of age, 65 = 65 years of age or older).",
+             source = "https://tidyr.tidyverse.org/reference/who.html",
+             var_details = c(list(country = "Country name",
+                                iso2 = "2 letter ISO country code",
+                                iso3 = "3 letter ISO country code",
+                                year = "year"),
+                                varlist))
+
+
+
 
 ### documentation
 
@@ -187,5 +217,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'faithful data'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'tidyr data'", repo_url = NULL)
 
