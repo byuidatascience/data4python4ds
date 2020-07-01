@@ -246,3 +246,97 @@
 
 
 
+#'
+#' @title Airline names
+#' @description Look up airline names from their carrier codes.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{carrier}{The variable is character. Two letter abbreviation}
+#'  \item{name}{The variable is character. Full name}
+#' }
+#' @source \url{https://github.com/hadley/nycflights13}
+#' @examples
+#' \dontrun{
+#' airlines
+#'}
+'airlines'
+
+
+
+#'
+#' @title Plane metadata
+#' @description Plane metadata for all plane tailnumbers found in the FAA aircraft registry. American Airways (AA) and Envoy Air (MQ) report fleet numbers rather than tail numbers so can't be matched.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{tailnum}{The variable is character. Tail number}
+#'  \item{year}{The variable is integer. Year manufactured}
+#'  \item{type}{The variable is character. }
+#'  \item{manufacturer}{The variable is character. Manufacturer}
+#'  \item{model}{The variable is character. model}
+#'  \item{engines}{The variable is integer. Number of engines}
+#'  \item{seats}{The variable is integer. Number of seats}
+#'  \item{speed}{The variable is integer. Average cruising speed in mph}
+#'  \item{engine}{The variable is character. Type of engine}
+#' }
+#' @source \url{https://github.com/hadley/nycflights13}
+#' @examples
+#' \dontrun{
+#' planes
+#'}
+'planes'
+
+
+
+#'
+#' @title Hourly weather data
+#' @description Hourly meterological data for LGA, JFK and EWR.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{origin}{The variable is character. Weather station. Named origin to facilitate merging with flights data.}
+#'  \item{year}{The variable is integer. year}
+#'  \item{month}{The variable is integer. month}
+#'  \item{day}{The variable is integer. day}
+#'  \item{hour}{The variable is integer. hour}
+#'  \item{temp}{The variable is numeric. Temperature in F}
+#'  \item{dewp}{The variable is numeric. Dewpoint in F}
+#'  \item{humid}{The variable is numeric. Relative humidity}
+#'  \item{wind_dir}{The variable is numeric. Wind direction}
+#'  \item{wind_speed}{The variable is numeric. Wind speed in mph}
+#'  \item{wind_gust}{The variable is numeric. Wind gust speed in mph}
+#'  \item{precip}{The variable is numeric. Precipitation in inches}
+#'  \item{pressure}{The variable is numeric. Sea level pressure in millibars}
+#'  \item{visib}{The variable is numeric. Visibility in miles}
+#'  \item{time_hour}{The variable is POSIXct,POSIXt. Date and hour of the recording as a POSIXct date.}
+#' }
+#' @source \url{https://github.com/hadley/nycflights13}
+#' @examples
+#' \dontrun{
+#' weather
+#'}
+'weather'
+
+
+
+#'
+#' @title Airport metadata
+#' @description Useful metadata about airports.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{faa}{The variable is character. FAA airport code}
+#'  \item{name}{The variable is character. Usual name of the airport}
+#'  \item{lat}{The variable is numeric. Lattitude of the airport location}
+#'  \item{lon}{The variable is numeric. Longitude of the airport location}
+#'  \item{alt}{The variable is numeric. Altitude in feet}
+#'  \item{tz}{The variable is numeric. Timezone offset from GMT}
+#'  \item{dst}{The variable is character. Daylight savings time zone. A = Standard US DST: starts on the second Sunday of March, ends on the first Sunday of November. U = unknown. N = no dst.}
+#'  \item{tzone}{The variable is character. IANA time zone, as determined by GeoNames webservice.}
+#' }
+#' @source \url{https://github.com/hadley/nycflights13}
+#' @examples
+#' \dontrun{
+#' airports
+#'}
+'airports'
+
+
+

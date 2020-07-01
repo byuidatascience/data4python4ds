@@ -109,6 +109,80 @@ dpr_document(flights, extension = ".md.R", export_folder = usethis::proj_get(),
                                 time_hour = "Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.")
                                 )
 
+airlines <- nycflights13::airlines
+airports <- nycflights13::airports
+planes <- nycflights13::planes
+weather <- nycflights13::weather
+
+usethis::use_data(airlines, airports, planes, weather)
+
+dpr_export(airlines, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".xlsx", ".sav", ".dta"))
+dpr_export(airports, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".xlsx", ".sav", ".dta"))
+dpr_export(planes, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".xlsx", ".sav", ".dta"))
+dpr_export(weather, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".xlsx", ".sav", ".dta"))
+
+dpr_document(airlines, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "airlines", title = "Airline names",
+             description = "Look up airline names from their carrier codes.",
+             source = "https://github.com/hadley/nycflights13",
+             var_details = list(
+               carrier = "Two letter abbreviation",
+               name = 'Full name'))
+
+dpr_document(airports, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "airports", title = "Airport metadata",
+             description = "Useful metadata about airports.",
+             source = "https://github.com/hadley/nycflights13",
+             var_details = list(
+               faa = 'FAA airport code',
+               name = 'Usual name of the airport',
+               lat = 'Lattitude of the airport location',
+               lon = 'Longitude of the airport location',
+               alt = 'Altitude in feet',
+               tz = 'Timezone offset from GMT',
+               dst = 'Daylight savings time zone. A = Standard US DST: starts on the second Sunday of March, ends on the first Sunday of November. U = unknown. N = no dst.',
+               tzone = 'IANA time zone, as determined by GeoNames webservice.'))
+
+dpr_document(planes, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "planes", title = "Plane metadata",
+             description = "Plane metadata for all plane tailnumbers found in the FAA aircraft registry. American Airways (AA) and Envoy Air (MQ) report fleet numbers rather than tail numbers so can't be matched.",
+             source = "https://github.com/hadley/nycflights13",
+             var_details = list(
+               tailnum = 'Tail number',
+               year = 'Year manufactured',
+               manufacturer = "Manufacturer",
+               model = 'model',
+               engines = 'Number of engines',
+               seats = 'Number of seats',
+               speed = 'Average cruising speed in mph',
+               engine = "Type of engine"))             
+
+dpr_document(weather, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "weather", title = "Hourly weather data",
+             description = "Hourly meterological data for LGA, JFK and EWR.",
+             source = "https://github.com/hadley/nycflights13",
+             var_details = list(
+               origin = 'Weather station. Named origin to facilitate merging with flights data.',
+               year = 'year',
+               month = 'month',
+               day = 'day',
+               hour = 'hour',
+               temp = "Temperature in F",
+               dewp = 'Dewpoint in F',
+               humid = 'Relative humidity',
+               wind_dir = "Wind direction",
+               wind_speed = "Wind speed in mph",
+               wind_gust = "Wind gust speed in mph",
+               precip = "Precipitation in inches",
+               pressure = "Sea level pressure in millibars",
+               visib = "Visibility in miles",
+               time_hour = "Date and hour of the recording as a POSIXct date."))
+
+             
 ### Lahman Baseball data
 
 batting <- Lahman::Batting
@@ -217,5 +291,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'tidyr data'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'rest of nycflights13 data'", repo_url = NULL)
 

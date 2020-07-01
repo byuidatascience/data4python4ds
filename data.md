@@ -254,3 +254,115 @@ A data frame with columns:
 
 
 
+## Airline names
+
+The data is called airlines.
+
+### Description
+
+Look up airline names from their carrier codes.
+
+The source of this data is < https://github.com/hadley/nycflights13 >
+
+### Data format
+
+A data frame with columns:
+
+|variable |class     |description             |
+|:--------|:---------|:-----------------------|
+|carrier  |character |Two letter abbreviation |
+|name     |character |Full name               |
+
+
+
+
+
+## Plane metadata
+
+The data is called planes.
+
+### Description
+
+Plane metadata for all plane tailnumbers found in the FAA aircraft registry. American Airways (AA) and Envoy Air (MQ) report fleet numbers rather than tail numbers so can't be matched.
+
+The source of this data is < https://github.com/hadley/nycflights13 >
+
+### Data format
+
+A data frame with columns:
+
+|variable     |class     |description                   |
+|:------------|:---------|:-----------------------------|
+|tailnum      |character |Tail number                   |
+|year         |integer   |Year manufactured             |
+|type         |character |NA                            |
+|manufacturer |character |Manufacturer                  |
+|model        |character |model                         |
+|engines      |integer   |Number of engines             |
+|seats        |integer   |Number of seats               |
+|speed        |integer   |Average cruising speed in mph |
+|engine       |character |Type of engine                |
+
+
+
+## Hourly weather data
+
+The data is called weather.
+
+### Description
+
+Hourly meterological data for LGA, JFK and EWR.
+
+The source of this data is < https://github.com/hadley/nycflights13 >
+
+### Data format
+
+A data frame with columns:
+
+|variable   |class          |description                                                            |
+|:----------|:--------------|:----------------------------------------------------------------------|
+|origin     |character      |Weather station. Named origin to facilitate merging with flights data. |
+|year       |integer        |year                                                                   |
+|month      |integer        |month                                                                  |
+|day        |integer        |day                                                                    |
+|hour       |integer        |hour                                                                   |
+|temp       |numeric        |Temperature in F                                                       |
+|dewp       |numeric        |Dewpoint in F                                                          |
+|humid      |numeric        |Relative humidity                                                      |
+|wind_dir   |numeric        |Wind direction                                                         |
+|wind_speed |numeric        |Wind speed in mph                                                      |
+|wind_gust  |numeric        |Wind gust speed in mph                                                 |
+|precip     |numeric        |Precipitation in inches                                                |
+|pressure   |numeric        |Sea level pressure in millibars                                        |
+|visib      |numeric        |Visibility in miles                                                    |
+|time_hour  |POSIXct,POSIXt |Date and hour of the recording as a POSIXct date.                      |
+
+
+
+## Airport metadata
+
+The data is called airports.
+
+### Description
+
+Useful metadata about airports.
+
+The source of this data is < https://github.com/hadley/nycflights13 >
+
+### Data format
+
+A data frame with columns:
+
+|variable |class     |description                                                                                                                                           |
+|:--------|:---------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
+|faa      |character |FAA airport code                                                                                                                                      |
+|name     |character |Usual name of the airport                                                                                                                             |
+|lat      |numeric   |Lattitude of the airport location                                                                                                                     |
+|lon      |numeric   |Longitude of the airport location                                                                                                                     |
+|alt      |numeric   |Altitude in feet                                                                                                                                      |
+|tz       |numeric   |Timezone offset from GMT                                                                                                                              |
+|dst      |character |Daylight savings time zone. A = Standard US DST: starts on the second Sunday of March, ends on the first Sunday of November. U = unknown. N = no dst. |
+|tzone    |character |IANA time zone, as determined by GeoNames webservice.                                                                                                 |
+
+
+
