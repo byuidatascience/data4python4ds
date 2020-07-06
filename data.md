@@ -382,7 +382,7 @@ A data frame with columns:
 
 |variable |class     |description    |
 |:--------|:---------|:--------------|
-|fruit    |character |Names of fruit |
+|name     |character |Names of fruit |
 
 
 

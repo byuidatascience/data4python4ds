@@ -340,12 +340,15 @@
 
 
 
+
+
+
 #'
 #' @title Sample strings of fruits for practicing string manipulations
 #' @description fruit comes from the rcorpora package written by Gabor Csardi; the data was collected by Darius Kazemi and made available at https://github.com/dariusk/corpora.
 #' @format A data frame with columns:
 #' \describe{
-#'  \item{fruit}{The variable is character. Names of fruit}
+#'  \item{name}{The variable is character. Names of fruit}
 #' }
 #' @source \url{https://github.com/dariusk/corpora}
 #' @examples

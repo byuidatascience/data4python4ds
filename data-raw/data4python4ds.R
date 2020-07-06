@@ -281,9 +281,9 @@ dpr_document(who, extension = ".md.R", export_folder = usethis::proj_get(),
 
 ### Fruit strings
 
-fruit <- tibble(fruit = stringr::fruit)
+fruit <- tibble(name = stringr::fruit)
 
-usethis::use_data(fruit)
+usethis::use_data(fruit, overwrite = TRUE)
 
 dpr_export(fruit, export_folder = path(package_path, "data-raw"), 
            export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
@@ -295,7 +295,7 @@ dpr_document(fruit, extension = ".md.R", export_folder = usethis::proj_get(),
              title = "Sample strings of fruits for practicing string manipulations",
              description = "fruit comes from the rcorpora package written by Gabor Csardi; the data was collected by Darius Kazemi and made available at https://github.com/dariusk/corpora.",
              source = "https://github.com/dariusk/corpora",
-             var_details = list(fruit = "Names of fruit"))
+             var_details = list(name = "Names of fruit"))
 
 
 ### documentation
@@ -307,5 +307,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'rest of nycflights13 data'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'fruit strings'", repo_url = NULL)
 

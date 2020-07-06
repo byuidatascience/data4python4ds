@@ -7,7 +7,7 @@
 \format{
 A data frame with columns:
 \describe{
- \item{fruit}{The variable is character. Names of fruit}
+ \item{name}{The variable is character. Names of fruit}
 }
 }
 \source{
