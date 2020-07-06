@@ -359,3 +359,19 @@
 
 
 
+#'
+#' @title Sample strings of words for practicing string manipulations
+#' @description words comes from the rcorpora package written by Gabor Csardi; the data was collected by Darius Kazemi and made available at https://github.com/dariusk/corpora.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{name}{The variable is character. words}
+#' }
+#' @source \url{https://github.com/dariusk/corpora}
+#' @examples
+#' \dontrun{
+#' words
+#'}
+'words'
+
+
+

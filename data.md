@@ -386,3 +386,23 @@ A data frame with columns:
 
 
 
+## Sample strings of words for practicing string manipulations
+
+The data is called words.
+
+### Description
+
+words comes from the rcorpora package written by Gabor Csardi; the data was collected by Darius Kazemi and made available at https://github.com/dariusk/corpora.
+
+The source of this data is < https://github.com/dariusk/corpora >
+
+### Data format
+
+A data frame with columns:
+
+|variable |class     |description |
+|:--------|:---------|:-----------|
+|name     |character |words       |
+
+
+

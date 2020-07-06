@@ -288,14 +288,27 @@ usethis::use_data(fruit, overwrite = TRUE)
 dpr_export(fruit, export_folder = path(package_path, "data-raw"), 
            export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
 
-
-
 dpr_document(fruit, extension = ".md.R", export_folder = usethis::proj_get(),
              object_name = "fruit", 
              title = "Sample strings of fruits for practicing string manipulations",
              description = "fruit comes from the rcorpora package written by Gabor Csardi; the data was collected by Darius Kazemi and made available at https://github.com/dariusk/corpora.",
              source = "https://github.com/dariusk/corpora",
              var_details = list(name = "Names of fruit"))
+
+words <- tibble(name = stringr::words)
+
+usethis::use_data(words, overwrite = TRUE)
+
+dpr_export(words, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
+
+dpr_document(words, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "words", 
+             title = "Sample strings of words for practicing string manipulations",
+             description = "words comes from the rcorpora package written by Gabor Csardi; the data was collected by Darius Kazemi and made available at https://github.com/dariusk/corpora.",
+             source = "https://github.com/dariusk/corpora",
+             var_details = list(name = "words"))
+
 
 
 ### documentation
