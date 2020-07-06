@@ -406,3 +406,23 @@ A data frame with columns:
 
 
 
+## Sample strings of sentences for practicing string manipulations
+
+The data is called sentences.
+
+### Description
+
+the Harvard sentences, which were designed to test VOIP systems, but are also useful for practicing regexps.
+
+The source of this data is < https://en.wikipedia.org/wiki/Harvard_sentences >
+
+### Data format
+
+A data frame with columns:
+
+|variable |class     |description       |
+|:--------|:---------|:-----------------|
+|name     |character |Harvard sentences |
+
+
+

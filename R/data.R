@@ -375,3 +375,19 @@
 
 
 
+#'
+#' @title Sample strings of sentences for practicing string manipulations
+#' @description the Harvard sentences, which were designed to test VOIP systems, but are also useful for practicing regexps.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{name}{The variable is character. Harvard sentences}
+#' }
+#' @source \url{https://en.wikipedia.org/wiki/Harvard_sentences}
+#' @examples
+#' \dontrun{
+#' sentences
+#'}
+'sentences'
+
+
+

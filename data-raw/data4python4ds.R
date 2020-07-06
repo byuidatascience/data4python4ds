@@ -309,6 +309,19 @@ dpr_document(words, extension = ".md.R", export_folder = usethis::proj_get(),
              source = "https://github.com/dariusk/corpora",
              var_details = list(name = "words"))
 
+sentences <- tibble(name = stringr::sentences)
+
+usethis::use_data(sentences)
+
+dpr_export(sentences, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
+
+dpr_document(sentences, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "sentences", 
+             title = "Sample strings of sentences for practicing string manipulations",
+             description = "the Harvard sentences, which were designed to test VOIP systems, but are also useful for practicing regexps.",
+             source = "https://en.wikipedia.org/wiki/Harvard_sentences",
+             var_details = list(name = "Harvard sentences"))
 
 
 ### documentation
@@ -320,5 +333,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'fruit strings'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'sentence strings'", repo_url = NULL)
 
