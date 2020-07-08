@@ -9,6 +9,9 @@ base_folder <- "../../byuidatascience/"
 user <- "byuidatascience"
 package_path <- str_c(base_folder, package_name_text)
 
+github_info <- dpr_info_github(user, package_name_text)
+usethis::proj_set(package_path)
+
 ####  Run to create repo locally and on GitHub.  ######
  
 # github_info <- dpr_create_github(user, package_name_text)
@@ -19,10 +22,8 @@ package_path <- str_c(base_folder, package_name_text)
 #                                      git_remote = github_info$clone_url)
 
 ##### dpr_delete_github(user, package_name_text) ####
-
 ####### End create section
-github_info <- dpr_info_github(user, package_name_text)
-usethis::proj_set(package_path)
+
 
 #### mpg data
 
@@ -323,6 +324,30 @@ dpr_document(sentences, extension = ".md.R", export_folder = usethis::proj_get()
              source = "https://en.wikipedia.org/wiki/Harvard_sentences",
              var_details = list(name = "Harvard sentences"))
 
+## categorical chapter
+
+gss_cat <- forcats::gss_cat
+
+usethis::use_data(gss_cat, overwrite = TRUE)
+
+dpr_export(gss_cat, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
+
+dpr_document(gss_cat, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "gss_cat", 
+             title = "A sample of categorical variables from the General Social survey",
+             description = "A sample of categorical variables from the General Social survey",
+             source = "Downloaded from https://gssdataexplorer.norc.org/.",
+             var_details = list(year = "year of survey, 2000–2014",
+                                age = "age. Maximum age truncated to 89.",
+                                marital = "marital status",
+                                race = "race",
+                                rincome = "reported income",
+                                partyid = "party affiliation",
+                                relig = "religion",
+                                denom = "denomination",
+                                tvhours = "hours per day watching tv"))
+
 
 ### documentation
 
@@ -333,5 +358,5 @@ dpr_write_script(folder_dir = package_path, r_read = "scripts_general/python4ds_
 
 devtools::document(package_path)
 
-dpr_push(folder_dir = package_path, message = "'sentence strings'", repo_url = NULL)
+dpr_push(folder_dir = package_path, message = "'category gss_cat'", repo_url = NULL)
 

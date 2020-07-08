@@ -391,3 +391,27 @@
 
 
 
+#'
+#' @title A sample of categorical variables from the General Social survey
+#' @description A sample of categorical variables from the General Social survey
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{year}{The variable is integer. year of survey, 2000–2014}
+#'  \item{marital}{The variable is factor. marital status}
+#'  \item{age}{The variable is integer. age. Maximum age truncated to 89.}
+#'  \item{race}{The variable is factor. race}
+#'  \item{rincome}{The variable is factor. reported income}
+#'  \item{partyid}{The variable is factor. party affiliation}
+#'  \item{relig}{The variable is factor. religion}
+#'  \item{denom}{The variable is factor. denomination}
+#'  \item{tvhours}{The variable is integer. hours per day watching tv}
+#' }
+#' @source \url{Downloaded from https://gssdataexplorer.norc.org/.}
+#' @examples
+#' \dontrun{
+#' gss_cat
+#'}
+'gss_cat'
+
+
+

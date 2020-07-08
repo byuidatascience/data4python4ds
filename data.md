@@ -426,3 +426,31 @@ A data frame with columns:
 
 
 
+## A sample of categorical variables from the General Social survey
+
+The data is called gss_cat.
+
+### Description
+
+A sample of categorical variables from the General Social survey
+
+The source of this data is < Downloaded from https://gssdataexplorer.norc.org/. >
+
+### Data format
+
+A data frame with columns:
+
+|variable |class   |description                       |
+|:--------|:-------|:---------------------------------|
+|year     |integer |year of survey, 2000–2014         |
+|marital  |factor  |marital status                    |
+|age      |integer |age. Maximum age truncated to 89. |
+|race     |factor  |race                              |
+|rincome  |factor  |reported income                   |
+|partyid  |factor  |party affiliation                 |
+|relig    |factor  |religion                          |
+|denom    |factor  |denomination                      |
+|tvhours  |integer |hours per day watching tv         |
+
+
+
