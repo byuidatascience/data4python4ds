@@ -454,3 +454,26 @@ A data frame with columns:
 
 
 
+## Terms of 11 presidents from Eisenhower to Obama
+
+The data is called presidential.
+
+### Description
+
+The names of each president, the start and end date of their term, and their party of 11 US presidents from Eisenhower to Obama.
+
+The source of this data is < https://github.com/tidyverse/ggplot2 >
+
+### Data format
+
+A data frame with columns:
+
+|variable |class     |description            |
+|:--------|:---------|:----------------------|
+|name     |character |Last name of president |
+|start    |Date      |Presidency start date  |
+|end      |Date      |Presidency end date    |
+|party    |character |Party of president     |
+
+
+

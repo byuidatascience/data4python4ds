@@ -349,6 +349,23 @@ dpr_document(gss_cat, extension = ".md.R", export_folder = usethis::proj_get(),
                                 tvhours = "hours per day watching tv"))
 
 
+presidential <- ggplot2::presidential
+
+usethis::use_data(presidential, overwrite = TRUE)
+
+dpr_export(presidential, export_folder = path(package_path, "data-raw"), 
+           export_format = c(".csv", ".json", ".xlsx", ".sav", ".dta"))
+
+dpr_document(presidential, extension = ".md.R", export_folder = usethis::proj_get(),
+             object_name = "presidential", 
+             title = "Terms of 11 presidents from Eisenhower to Obama",
+             description = "The names of each president, the start and end date of their term, and their party of 11 US presidents from Eisenhower to Obama.",
+             source = "https://github.com/tidyverse/ggplot2",
+             var_details = list(name = "Last name of president",
+                                start = "Presidency start date",
+                                end = "Presidency end date",
+                                party = "Party of president"))
+
 ### documentation
 
 dpr_readme(usethis::proj_get(), package_name_text, user)

@@ -415,3 +415,22 @@
 
 
 
+#'
+#' @title Terms of 11 presidents from Eisenhower to Obama
+#' @description The names of each president, the start and end date of their term, and their party of 11 US presidents from Eisenhower to Obama.
+#' @format A data frame with columns:
+#' \describe{
+#'  \item{name}{The variable is character. Last name of president}
+#'  \item{start}{The variable is Date. Presidency start date}
+#'  \item{end}{The variable is Date. Presidency end date}
+#'  \item{party}{The variable is character. Party of president}
+#' }
+#' @source \url{https://github.com/tidyverse/ggplot2}
+#' @examples
+#' \dontrun{
+#' presidential
+#'}
+'presidential'
+
+
+
